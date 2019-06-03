@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a6b3658e33a86548e8cb2a6a88a1b1c",
+    "content-hash": "f0a1260d9a0c3423b30048721e17ed12",
     "packages": [
         {
             "name": "automattic/jetpack-connection",
@@ -59,13 +59,23 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/logo",
-                "reference": "9e99ef65b2600e06f2eaeaf435771194a174f40d"
+                "reference": "aa3d128c9280d6186210a86b10f8bf5403f44be7"
+            },
+            "require-dev": {
+                "php-mock/php-mock": "^2.1",
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Automattic\\Jetpack\\Assets\\": "src/"
                 }
+            },
+            "scripts": {
+                "phpunit": [
+                    "@composer install",
+                    "./vendor/phpunit/phpunit/phpunit --colors=always"
+                ]
             },
             "license": [
                 "GPL-2.0-or-later"
@@ -248,6 +258,35 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Creates a custom autoloader for a plugin or theme."
+        },
+        {
+            "name": "automattic/jetpack-standards",
+            "version": "dev-dna/standards",
+            "dist": {
+                "type": "path",
+                "url": "./packages/standards",
+                "reference": "73e3127c21e31bd801ac9e063b8e86dafab69300"
+            },
+            "require": {
+                "composer-plugin-api": "^1.1",
+                "dealerdirect/phpcodesniffer-composer-installer": "0.5.0",
+                "phpcompatibility/phpcompatibility-wp": "2.0.0",
+                "sirbrillig/phpcs-variable-analysis": "2.6.4",
+                "wp-coding-standards/wpcs": "2.1.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Automattic\\Jetpack\\Standards\\PostInstall"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Automattic\\Jetpack\\Standards\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "A set of standards for Jetpack development"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -622,7 +661,8 @@
     "stability-flags": {
         "automattic/jetpack-logo": 20,
         "automattic/jetpack-constants": 20,
-        "automattic/jetpack-autoloader": 20
+        "automattic/jetpack-autoloader": 20,
+        "automattic/jetpack-standards": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
