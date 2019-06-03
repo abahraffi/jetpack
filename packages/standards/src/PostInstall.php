@@ -36,8 +36,8 @@ class PostInstall implements PluginInterface, EventSubscriberInterface {
 	 * Currently assumes that this file is at the third level of root.
 	 */
 	public static function post_install() {
-		self::xcopy( ( __DIR__ ) . '/standards', dirname( dirname( dirname( __DIR__ ) ) ) );
-		self::xcopy( ( __DIR__ ) . '/github', dirname( dirname( dirname( __DIR__ ) ) ) . '/.github' );
+		self::xcopy( ( __DIR__ ) . '/standards', dirname( dirname( dirname( dirname( __DIR__ ) ) ) ) );
+		self::xcopy( ( __DIR__ ) . '/github', dirname( dirname( dirname( dirname( __DIR__ ) ) ) ) . '/.github' );
 	}
 
 	/**
