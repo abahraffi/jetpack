@@ -42,6 +42,8 @@ phpcs.xml
 
 ## Things provided by jetpack-standards
 ## Some may want to commit these files, other may not. We're not.
+.github/labels.json
+.github/settings.json
 /.codeclimate.yml
 /.editorconfig
 /.eslines.json
