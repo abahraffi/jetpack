@@ -49,7 +49,6 @@ phpcs.xml
 /.eslines.json
 /.eslintrc.js
 /.npmrc
-/.nvmrc
 /.phpcs.xml.dist
 /.prettierrc
 
