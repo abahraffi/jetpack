@@ -48,7 +48,6 @@ phpcs.xml
 /.editorconfig
 /.eslines.json
 /.eslintrc.js
-/.jshintrc
 /.npmrc
 /.nvmrc
 /.phpcs.xml.dist
